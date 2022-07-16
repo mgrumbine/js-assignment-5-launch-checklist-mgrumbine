@@ -1,3 +1,5 @@
+const { validateInput } = require("./scriptHelper");
+
 window.addEventListener("load", function() {
     let form = document.querySelector("form");
     form.addEventListener("submit", function(event){
@@ -12,7 +14,7 @@ window.addEventListener("load", function() {
     });
 }); 
 
-window.addEventListener("load", function() {
+window.addEventListener("load", validateInput(document, list)) {};
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()

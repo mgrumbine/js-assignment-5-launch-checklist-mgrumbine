@@ -25,8 +25,15 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
-}
+    let pilot = document.querySelector("input[name=pilotName]");
+    let copilot = document.querySelector("input[name=copilotName]");
+    let fuelLevel = document.querySelector("input[name=fuelLevel]");
+    let cargoLevel = document.querySelector("input[name=cargoMass]");
+    if (validateInput(document.pilot.value) !== "Not a Number" || validateInput(document.copilot.value) !== "Not a Number"  || validateInput(document.fuelLevel.value) !== "Is a Number"  || validateInput(document.cargoLevel.value) !== "Is a Number"){
+        alert("Pilot name and co-pilot name cannot be numbers! Fuel Level and Cargo Mass must be numbers!");
+        document.event.preventDefault();
+    }
+};
 
 async function myFetch() {
     let planetsReturned;
